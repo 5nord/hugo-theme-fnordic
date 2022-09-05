@@ -1,0 +1,66 @@
+/* Colors */
+:root {
+  --black: #333333;
+  --white: #fafafa;
+  --primary-color: #fafafa;
+}
+
+
+#mobile-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  transition: all 150ms ease;
+}
+
+.nav--hidden {
+	transform: translateY(50px);
+}
+
+.bloc-icon {
+  padding: 8px 24px;
+}
+
+.bloc-icon i {
+  font-size: 2em;
+}
+
+#hamburger-menu {
+    width: 32px;
+    height: 32px;
+    display: block;
+    border: none;
+
+    background: linear-gradient(
+      to bottom,
+      var(--black), var(--black) 20%,
+      white 20%, white 40%,
+      var(--black) 40%, var(--black) 60%,
+      white 60%, white 80%,
+      var(--black) 80%, var(--black) 100%
+    );
+}
+
+#hamburger-menu input { display: none; }
+#hamburger-menu nav {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    transition: 300;
+}
+
+#hamburger-menu input:checked + nav {
+    visibility: visible;
+    left: 0;
+}
+
+
+/* Hide mobile nav for wide screens */
+@media screen and (min-width: 600px) { .mobile-nav { display: none; } }
+

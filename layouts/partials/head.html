@@ -1,0 +1,30 @@
+<head>
+	<meta charset="utf-8">
+	<!-- TODO: Description -->
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	{{ $title := print .Site.Title " | " .Title }}
+	{{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+	<title>{{$title}}</title>
+
+	<!-- TODO: Open Graph social tags -->
+	<meta property="og:title" content="{{$title}}">
+	<meta property="og:type" content="">
+	<meta property="og:url" content="">
+	<meta property="og:image" content="">
+
+	<!-- TODO: Favicon, Manifest... -->
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="apple-touch-icon" href="icon.png">
+
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/style.css">
+
+	<link rel="stylesheet" href="/css/fontawesome.min.css">
+	<link rel="stylesheet" href="/css/brands.min.css">
+	<link rel="stylesheet" href="/css/solid.min.css">
+
+	<!-- TODO: Theme Color! -->
+	<meta name="theme-color" content="#fafa00">
+</head>
